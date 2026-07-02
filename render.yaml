@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ems-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MONGODB_URL
+        sync: false
+      - key: JWT_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
